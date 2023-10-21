@@ -1,0 +1,214 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color) 70%,
+    var(--secondary-color-dark)
+  );
+  padding: 10px;
+}
+
+/* <----------------------------------- Card -----------------------------------> */
+
+.card {
+  max-width: 100%;
+  width: 350px;
+  height: 515px;
+  margin: 100px auto 0;
+}
+
+.card .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 3s;
+  transform-style: preserve-3d;
+}
+
+.card .card-inner .front,
+.card .card-inner .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* <----------------------------------- Front -----------------------------------> */
+.card .card-inner .front {
+  background-color: var(--gray-color-light);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.card .card-inner .front h2 {
+  color: var(--gray-color-dark);
+  font-size: 24px;
+  font-family: "ExpletusSans", sans-serif;
+  font-weight: 500;
+}
+
+.card .card-inner .front p {
+  color: black;
+  font-size: 16px;
+  font-family: "MuktaVaani", sans-serif;
+}
+
+.card .card-inner .front button {
+  width: auto;
+  border: 3px solid var(--primary-color-dark);
+  background: white;
+  border-radius: 50px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  color: var(--primary-color-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "MuktaVaani", sans-serif;
+}
+
+/* <----------------------------------- Back -----------------------------------> */
+.card .card-inner .back {
+  background: var(--gray-color-light);
+  color: var(--gray-color-dark);
+  padding: 20px 40px;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.card .card-inner .back h1 {
+  font-size: 40px;
+  font-family: "ExpletusSans", sans-serif;
+  line-height: 55px;
+  margin-bottom: 10px;
+}
+
+.card .card-inner .back h1 span {
+  font-weight: 400;
+  font-family: "RopaSans", sans-serif;
+}
+
+.card .card-inner .back p {
+  font-size: 18px;
+  text-align: left;
+}
+
+.card .card-inner .back p span {
+  font-weight: 600;
+}
+
+.card .card-inner .back img {
+  width: 120px;
+  user-select: none;
+}
+
+.card .card-inner .back .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card .card-inner .back .row .col {
+  flex: 1;
+  text-align: center;
+  color: var(--gray-color-dark);
+  font-size: 12px;
+  position: relative;
+}
+
+.card .card-inner .back .row .col h2 {
+  font-size: 20px;
+}
+
+.card .card-inner .back .row .col::after {
+  content: "";
+  width: 1.5px;
+  height: 35px;
+  background-color: var(--primary-color-dark);
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.card .card-inner .back .row .col:last-child::after {
+  display: none;
+}
+
+.card .card-inner .back .row .col p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.card .card-inner .back .row button {
+  background: var(--primary-color);
+  border: 0;
+  outline: 0;
+  padding: 8px 25px;
+  border-radius: 30px;
+  margin: 0 auto;
+  box-shadow: 3px 3px 12px rgba(33, 166, 128, 0.342);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.card .card-inner .back .row a.rrss {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 3px 12px var(--gray-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -10px 5px 0 5px;
+  transition: all 0.3s;
+}
+.card .card-inner .back .row a.rrss :hover {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.card .card-inner .back .row a.rrss img {
+  width: 50%;
+}
+
+/* <----------------------------------- HOVER -----------------------------------> */
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* <----------------------------------- FACE.HTML -----------------------------------> */
+
+.container .faces {
+  text-align: center;
+}
+
+.container .faces h2 {
+  margin: 20px 0;
+  font-size: 40px;
+  font-family: "MuktaVaani", sans-serif;
+  line-height: 55px;
+  margin-bottom: 10px;
+  color: var(--gray-color-dark);
+  font-weight: 400;
+}
+
+.container .faces img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
